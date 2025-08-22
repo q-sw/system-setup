@@ -139,3 +139,17 @@ the command `config`
 ```shell
 make docker-run
 ```
+
+## Release creation
+
+To build and publish my release, I use [goreleaser](https://goreleaser.com/).
+The release process is manage in the [makefile](./makefile) in the release section.
+
+To pusblish the release, I follow these steps
+
+```shell
+export GITHUB_TOKEN="MY GITHUB TOKEN"
+git tag -a v0.1.0 -m "My release"
+git push origin v0.1.0
+make release
+```
