@@ -19,3 +19,13 @@ docker-build: ## Build Go binary
 
 docker-run: docker-build ## Build Go binary
 	docker run -it testconfig:latest
+
+#-- Release
+release-check: ## Check release file
+	goreleaser check
+
+release-test: release-check ## Test to create release locally
+	goreleaser release --snapshot --clean
+
+release: release-test ## Build and publish release
+	goreleaser release
