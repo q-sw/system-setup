@@ -1,0 +1,126 @@
+---
+aptStandardPackages:
+  - alacritty
+  - ansible
+  - ansible-core
+  - ansible-lint
+  - apt-transport-https
+  - ca-certificates
+  - cargo
+  - cmake
+  - curl
+  - fzf
+  - git
+  - htop
+  - gnome-shell-extension-manager
+  - gnome-tweak-tool
+  - gnupg2
+  - npm
+  - pkg-config
+  - pipx
+  - python3
+  - python3-pip
+  - python3-venv
+  - ripgrep
+  - shfmt
+  - software-properties-common
+  - stow
+  - tmux
+  - tree
+  - unzip
+  - wget
+  - wl-clipboard
+  - zsh
+aptRepositories:
+  - name: brave
+    mode: gpg
+    gpgURL: https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    gpgKeyName: brave.gpg
+    repoURL: https://brave-browser-apt-release.s3.brave.com stable main
+    toSign: false
+  - name: docker
+    mode: gpg
+    gpgURL: https://download.docker.com/linux/ubuntu/gpg
+    gpgKeyName: docker.asc
+    repoURL: https://download.docker.com/linux/ubuntu noble stable
+    toSign: false
+  - name: google-chrome
+    mode: gpg
+    gpgURL: https://dl.google.com/linux/linux_signing_key.pub
+    gpgKeyName: chrome.asc
+    repoURL: https://dl.google.com/linux/chrome/deb/ stable main
+    toSign: false
+  - name: gcloud
+    mode: gpg
+    gpgURL: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    gpgKeyName: gcloud.gpg
+    repoURL: https://packages.cloud.google.com/apt cloud-sdk main
+    toSign: true
+  - name: golang
+    mode: ppa
+    gpgURL: ppa:longsleep/golang-backports
+    gpgKeyName: ""
+    repoURL: ""
+    toSign: false
+  - name: helm
+    mode: gpg
+    gpgURL: https://baltocdn.com/helm/signing.asc
+    gpgKeyName: helm.gpg
+    repoURL: https://baltocdn.com/helm/stable/debian all main
+    toSign: true
+  - name: hashicorp
+    mode: gpg
+    gpgURL: https://apt.releases.hashicorp.com/gpg
+    gpgKeyName: hashicorp.gpg
+    repoURL: https://apt.releases.hashicorp.com noble main
+    toSign: true
+  - name: vscode
+    mode: gpg
+    gpgURL: https://packages.microsoft.com/keys/microsoft.asc
+    gpgKeyName: vscode.gpg
+    repoURL: https://packages.microsoft.com/repos/code stable main
+    toSign: true
+additionnalPackages:
+  - brave-browser
+  - code
+  - docker-ce
+  - docker-ce-cli
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  - containerd.io
+  - google-chrome-stable
+  - google-cloud-cli
+  - google-cloud-cli-minikube
+  - kubectl
+  - kubectx
+  - helm
+  - packer
+  - terraform
+packagesFromGithub:
+  - name: neovim
+    url: https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+    installPath: /opt
+    binaryPath: /opt/neovim/nvim-linux-x86_64/bin/nvim
+    compressionType: gz
+  - name: lazygit
+    url: https://github.com/jesseduffield/lazygit/releases/download/v0.54.2/lazygit_0.54.2_darwin_x86_64.tar.gz
+    installPath: /opt
+    binaryPath: /opt/lazygit/lazygit
+    compressionType: gz
+  - name: FiraCode
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.tar.xz
+    installPath: /usr/local/share/fonts
+    binaryPath: ""
+    compressionsType: xz
+  - name: Meslo
+    url: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.tar.xz
+    installPath: /usr/local/share/fonts
+    binaryPath: ""
+    compressionType: xz
+personalGithubRepo:
+  - name: dotfiles
+    url: https://github.com/q-sw/dotfiles.git
+    path: HOME/dotfiles
+  - name: go-cli
+    url: https://github.com/q-sw/go-cli.git
+    path: HOME/dev/go-cli
