@@ -29,13 +29,13 @@ I used Ubuntu 24.04 when I created this project.
 2. Add APT repositories and install Packages.
 3. Install packages from github repositories (neovim, lazygit...)
 4. Download Git repositories like dotfile repo and create all necessary symlinks. (In progress)
-5. Gnome Configuration (In progress (In progress))
+5. Gnome Configuration (In progress)
 
 > Much details in the next sections
 
 ### Standard APT Packages
 
-All installed packages are defined in the file `[cmd/systemSetup/templates/config.yaml.tmpl](./cmd/systemSetup/templates/config.yaml.tmpl)`
+All installed packages are defined in the file [cmd/systemSetup/templates/config.yaml.tmpl](./cmd/systemSetup/templates/config.yaml.tmpl)
 
 > Check the variable `aptStandardPackages`
 > all lists can be overridden by creating a `config.yaml` file
@@ -60,7 +60,7 @@ I must include them by default in my setup
 
 The definition is in the config file
 
-> Check the variable `aptRepositories` ans `additionnalPackages`
+> Check the variable `aptRepositories` and `additionnalPackages`
 
 I include:
 
@@ -94,7 +94,7 @@ I install also some fonts from **Nerd Fonts** such as:
 To finish my system configuration, I need to get some stuff from my GitHub,
 like my dotfiles and my personal CLI. All links are below:
 
-[Dotfiles](https://github.com/q-sw/dotfiles)
+[Dotfiles](https://github.com/q-sw/dotfiles)  
 [Personal CLI](https://github.com/q-sw/go-cli)
 
 ### Gnome Configuration
