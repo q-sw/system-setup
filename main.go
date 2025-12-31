@@ -22,7 +22,7 @@ func main() {
 		systemsetup.InitConfiguration()
 	case configFilePath != "":
 		fmt.Println("Custom configuration is used")
-
+		systemsetup.Setup(configFilePath)
 	default:
 		fmt.Println("Start System configuration by default")
 		systemsetup.InitConfiguration()
